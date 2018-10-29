@@ -11,7 +11,6 @@ if($con->connect_error)
 else
 echo "Connection Successful";
 $qry="select * from post";
-if($con->query($qry)===TRUE)
 $res=$con->query($qry);
 echo "<table border=1><th>Plan Name</th><th>Monthly Rental</th><th>Free Calls</th><th>Free SMSs</th><th>Free Internet</th><th>Call Charges</th><th>SMS Charges</th><th>Data Charges</th><th>Roaming Charges</th>";
 while($row=$res->fetch_assoc())
