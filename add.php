@@ -8,15 +8,15 @@ if($con->connect_error)
 {
 	die("Connection failed");
 }
-$PN=$_GET('pn');
-$FC=$_GET('fc');
-$FS=$_GET('fs');
-$FI=$_GET('fi');
-$CC=$_GET('cc');
-$SC=$_GET('sc');
-$DC=$_GET('dc');
-$RC=$_GET('rc');
-$MR=$_GET('mr');
+$PN=$_POST['pn'];
+$FC=$_POST['fc'];
+$FS=$_POST['fs'];
+$FI=$_POST['fi'];
+$CC=$_POST['cc'];
+$SC=$_POST['sc'];
+$DC=$_POST['dc'];
+$RC=$_POST['rc'];
+$MR=$_POST['mr'];
 $qry="insert into post values('$PN','$FC','$FS','$FI','$CC','$SC','$DC','$RC','$MR');";
 if($con->query($qry)===TRUE)
 include "suc.html";
